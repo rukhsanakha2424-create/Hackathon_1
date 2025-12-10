@@ -12,6 +12,19 @@ description: "Task list template for feature implementation"
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
+## Constitution Check
+
+- [ ] **Safety First**: All tasks must adhere to safety protocols and protect human life.
+- [ ] **Simplicity in Learning**: Tasks should break down complex concepts into manageable steps.
+- [ ] **Ethical Robotics**: Tasks related to robot behavior must ensure ethical considerations are met.
+- [ ] **Human-Centered Design**: Tasks should focus on creating solutions that assist and empower human users.
+- [ ] **Transparency**: Tasks should promote explainable AI decisions and system behaviors.
+- [ ] **Reliability & Accuracy**: Tasks must ensure precise sensor data and actions.
+- [ ] **Continuous Learning**: Tasks should support continuous improvement and adaptation of systems.
+- [ ] **Real-World Application**: Tasks should connect to actual use cases.
+- [ ] **Collaboration**: Tasks should facilitate safe human-robot collaboration.
+- [ ] **Innovation & Creativity**: Tasks should encourage new designs and solutions.
+
 ## Format: `[ID] [P?] [Story] Description`
 
 - **[P]**: Can run in parallel (different files, no dependencies)

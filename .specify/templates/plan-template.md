@@ -31,7 +31,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Safety First**: All designs must prioritize human life and adhere to safety protocols.
+- [ ] **Simplicity in Learning**: Complex concepts should be broken down into step-by-step learning modules within the plan.
+- [ ] **Ethical Robotics**: Design choices must reflect responsible robot behavior and ethical considerations.
+- [ ] **Human-Centered Design**: Solutions must assist and empower human users.
+- [ ] **Transparency**: AI decisions and system behaviors must be explainable.
+- [ ] **Reliability & Accuracy**: Sensors and actions must be designed for precision.
+- [ ] **Continuous Learning**: The system should support continuous improvement and adaptation.
+- [ ] **Real-World Application**: Connect every design aspect to actual use cases.
+- [ ] **Collaboration**: Design should facilitate safe human-robot collaboration.
+- [ ] **Innovation & Creativity**: Encourage novel designs and solutions within the plan.
 
 ## Project Structure
 

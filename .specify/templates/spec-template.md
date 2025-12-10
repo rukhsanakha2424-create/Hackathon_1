@@ -5,6 +5,19 @@
 **Status**: Draft  
 **Input**: User description: "$ARGUMENTS"
 
+## Constitution Alignment
+
+- [ ] **Safety First**: Feature explicitly addresses safety protocols and human life protection.
+- [ ] **Simplicity in Learning**: Feature design supports step-by-step learning of concepts.
+- [ ] **Ethical Robotics**: Feature adheres to principles of responsible robot behavior.
+- [ ] **Human-Centered Design**: Feature design focuses on assisting and empowering human users.
+- [ ] **Transparency**: Feature design ensures explainable AI decisions.
+- [ ] **Reliability & Accuracy**: Feature requires precise sensor data and actions.
+- [ ] **Continuous Learning**: Feature supports system and student improvement over time.
+- [ ] **Real-World Application**: Feature connects to actual use cases.
+- [ ] **Collaboration**: Feature design promotes safe human-robot collaboration.
+- [ ] **Innovation & Creativity**: Feature encourages new designs and solutions.
+
 ## User Scenarios & Testing *(mandatory)*
 
 <!--

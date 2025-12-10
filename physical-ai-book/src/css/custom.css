@@ -1,0 +1,278 @@
+/**
+ * Global CSS for the textbook-style theme.
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Color Palette */
+  --ifm-background-color: #F5F7F9; /* Light Gray - clean background */
+  --ifm-color-primary: #004D40; /* Dark Teal - for headings and primary elements */
+  --ifm-link-color: #00796B; /* Teal - for links */
+  --ifm-button-background-color: #4CAF50; /* Green - for buttons */
+  --ifm-font-color-base: #37474F; /* Dark Slate Gray - for body text */
+  --ifm-card-background-color: #FFFFFF;
+  --ifm-toc-background-color: #E0F2F7; /* Light Cyan - for sidebar/TOC */
+
+  /* Typography */
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', 'Menlo', 'Consolas', 'Monaco', monospace;
+  --ifm-heading-font-family: 'Montserrat', sans-serif;
+  --ifm-line-height-base: 1.8;
+
+  /* Code Blocks */
+  --ifm-code-background: #2D2D2D;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+  --ifm-paragraph-margin-bottom: 1.5rem;
+
+  /* Borders and Shadows */
+  --ifm-card-border-radius: 0.75rem; /* 12px */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-background-color: #263238; /* Dark Blue Gray */
+  --ifm-color-primary: #80CBC4; /* Light Teal */
+  --ifm-link-color: #4DB6AC; /* Medium Teal */
+  --ifm-button-background-color: #66BB6A; /* Light Green */
+  --ifm-font-color-base: #ECEFF1; /* Light Blue Gray */
+  --ifm-card-background-color: #37474F;
+  --ifm-toc-background-color: #2F434E;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.2);
+}
+
+/* Basic Styles */
+body {
+    font-feature-settings: "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ifm-color-primary);
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  text-shadow: var(--ifm-global-shadow-lw);
+}
+
+/* Links and Buttons */
+.button, a {
+    transition: all 0.2s ease-in-out;
+}
+
+.button--primary {
+  background-color: var(--ifm-button-background-color);
+  color: var(--ifm-color-primary);
+  border: none;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.button--primary:hover {
+  background-color: #a8d1ce; /* Slightly lighter on hover */
+  box-shadow: var(--ifm-global-shadow-lg);
+  transform: translateY(-2px);
+}
+
+a, a:hover {
+    color: var(--ifm-link-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area as cards */
+.theme-doc-markdown {
+    background-color: var(--ifm-card-background-color);
+    padding: var(--ifm-spacing-horizontal);
+    border-radius: var(--ifm-card-border-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+    margin-bottom: 2rem;
+}
+
+/* Sidebar styling */
+.theme-doc-sidebar-container {
+    background-color: var(--ifm-toc-background-color);
+    border-right: 1px solid #e0e0e0;
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+    border-right: 1px solid #333;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--ifm-paragraph-margin-bottom);
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+th {
+  background-color: var(--ifm-toc-background-color);
+  font-family: var(--ifm-heading-font-family);
+}
+
+[data-theme='dark'] th {
+    background-color: #333;
+}
+
+[data-theme='dark'] th, [data-theme='dark'] td {
+    border-color: #444;
+}
+
+/* Admonition styles (info/warning/tip) */
+.alert {
+    border-radius: var(--ifm-card-border-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+    border-left-width: 8px;
+}
+
+.alert--info {
+    --ifm-alert-background-color: #e6f7ff;
+    --ifm-alert-border-color: #91d5ff;
+}
+
+.alert--warning {
+    --ifm-alert-background-color: #fffbe6;
+    --ifm-alert-border-color: #ffe58f;
+}
+
+.alert--danger {
+    --ifm-alert-background-color: #fff1f0;
+    --ifm-alert-border-color: #ffccc7;
+}
+
+/* Chapter Icons - Add this class to your MDX headings: ### <i class="fas fa-robot chapter-icon"></i> Chapter Title */
+.chapter-icon {
+  color: var(--ifm-color-primary);
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Optional: Subtle background pattern */
+/*
+body {
+    background-image: url('data:image/svg+xml,...');
+}
+*//* Hero Section Enhancements */
+.hero--primary {
+  --ifm-hero-background-color: linear-gradient(135deg, var(--ifm-background-color) 0%, #D0DFE6 100%);
+  color: var(--ifm-color-primary);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  color: var(--ifm-font-color-base);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Ensure the button has correct styling */
+.button--secondary {
+  background-color: var(--ifm-button-background-color);
+  color: white; /* Ensure good contrast */
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+  transition: all 0.3s ease;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-link-color); /* Hover effect */
+  box-shadow: var(--ifm-global-shadow-lg);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+/* Hero Section Enhancements */
+.hero--primary {
+  --ifm-hero-background-color: linear-gradient(135deg, var(--ifm-background-color) 0%, #D0DFE6 100%);
+  color: var(--ifm-color-primary);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  color: var(--ifm-font-color-base);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Ensure the button has correct styling */
+.button--secondary {
+  background-color: var(--ifm-button-background-color);
+  color: white; /* Ensure good contrast */
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+  transition: all 0.3s ease;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-link-color); /* Hover effect */
+  box-shadow: var(--ifm-global-shadow-lg);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
